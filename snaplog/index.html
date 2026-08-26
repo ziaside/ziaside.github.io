@@ -1,66 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="SnapLog App Store Preview">
-<title>SnapLog</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="SnapLog App Store Preview"><title>SnapLog</title>
 <style>
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:#fff;color:#222}
-body{font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.header{height:72px;border-bottom:1px solid #eceff3;display:flex;align-items:center}
-.header-inner{width:min(1440px,calc(100% - 48px));margin:0 auto;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:18px;font-weight:800;letter-spacing:-.04em}
-.back{font-size:14px;color:#737982}
-.page{width:min(1560px,calc(100% - 64px));margin:0 auto;padding:52px 0 80px}
-.app-head{display:flex;align-items:center;justify-content:space-between;gap:28px;width:min(1100px,100%);margin:0 auto 46px;padding:0 4px}
-.app-identity{display:flex;align-items:center;gap:18px;min-width:0}
-.app-icon{width:92px;height:92px;border-radius:22px;border:1px solid #edf0f4;display:flex;align-items:center;justify-content:center;background:#fff;box-shadow:0 8px 24px rgba(34,34,34,.05);font-size:16px;font-weight:850;letter-spacing:-.06em;line-height:1.02;text-align:center}
-.app-copy h1{margin:0 0 7px;font-size:32px;line-height:1.05;letter-spacing:-.04em}.app-copy p{margin:0;color:#7d8490;font-size:15px}.download{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-width:116px;height:48px;padding:0 24px;border-radius:24px;background:#0a84ff;color:#fff;font-size:16px;font-weight:750;box-shadow:0 8px 20px rgba(10,132,255,.18);transition:transform .15s ease,opacity .15s ease}.download:hover{opacity:.9;transform:translateY(-1px)}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:start}
-.card{background:#fff;border:1px solid #edf0f4;border-radius:28px;overflow:hidden;box-shadow:0 14px 40px rgba(34,34,34,.06)}
-.card img{display:block;width:100%;height:auto}
-.footer{width:min(1440px,calc(100% - 48px));margin:0 auto;padding:28px 0 36px;border-top:1px solid #eceff3;color:#8b9199;font-size:12px;display:flex;justify-content:space-between;gap:20px}
-.footer-links{display:flex;gap:16px;flex-wrap:wrap}
-.footer-links a:hover{color:#222}
-@media(max-width:900px){
- .page{width:min(100% - 28px,680px);padding:28px 0 48px}
- .app-head{margin-bottom:28px;gap:14px}.app-icon{width:72px;height:72px;border-radius:18px;font-size:13px}.app-identity{gap:13px}.app-copy h1{font-size:25px}.app-copy p{font-size:13px}.download{min-width:88px;height:42px;padding:0 18px;font-size:15px}
- .grid{grid-template-columns:1fr;gap:18px}
- .card{border-radius:20px}
- .header{height:64px}
- .header-inner,.footer{width:calc(100% - 28px)}
- .footer{flex-direction:column;gap:10px}
-}
-@media(max-width:520px){.app-head{align-items:flex-start}.app-copy p{max-width:155px}.download{margin-top:14px}}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:#fff;color:#222}body{font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.header{height:72px;border-bottom:1px solid #eceff3;display:flex;align-items:center}.header-inner{width:min(1440px,calc(100% - 48px));margin:0 auto;display:flex;align-items:center;justify-content:space-between}.logo{font-size:18px;font-weight:800;letter-spacing:-.04em}.back{font-size:14px;color:#737982}.page{width:min(1560px,calc(100% - 64px));margin:0 auto;padding:52px 0 80px}.toolbar{width:min(1100px,100%);margin:0 auto 18px;display:flex;justify-content:flex-end}.lang{border:1px solid #dfe3e8;background:#fff;border-radius:10px;padding:9px 34px 9px 12px;font:inherit;font-size:14px;color:#4f5660}.app-head{display:flex;align-items:center;justify-content:space-between;gap:28px;width:min(1100px,100%);margin:0 auto 46px;padding:0 4px}.app-identity{display:flex;align-items:center;gap:18px;min-width:0}.app-icon{width:92px;height:92px;border-radius:22px;border:1px solid #edf0f4;display:flex;align-items:center;justify-content:center;background:#fff;box-shadow:0 8px 24px rgba(34,34,34,.05);font-size:16px;font-weight:850;letter-spacing:-.06em;line-height:1.02;text-align:center}.app-copy h1{margin:0 0 7px;font-size:32px;line-height:1.05;letter-spacing:-.04em}.app-copy p{margin:0;color:#7d8490;font-size:15px}.download{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-width:116px;height:48px;padding:0 24px;border-radius:24px;background:#0a84ff;color:#fff;font-size:16px;font-weight:750;box-shadow:0 8px 20px rgba(10,132,255,.18)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:start}.card{background:#fff;border:1px solid #edf0f4;border-radius:28px;overflow:hidden;box-shadow:0 14px 40px rgba(34,34,34,.06);margin:0}.card img{display:block;width:100%;height:auto}.description{width:min(860px,100%);margin:64px auto 0;border-top:1px solid #eceff3;padding-top:44px}.description h2{font-size:26px;letter-spacing:-.035em;margin:0 0 18px}.description h3{font-size:18px;margin:30px 0 8px}.description p{font-size:15px;line-height:1.8;color:#4f5660;margin:0 0 14px;white-space:pre-line}.footer{width:min(1440px,calc(100% - 48px));margin:0 auto;padding:28px 0 36px;border-top:1px solid #eceff3;color:#8b9199;font-size:12px;display:flex;justify-content:space-between;gap:20px}.footer-links{display:flex;gap:16px;flex-wrap:wrap}.footer-links a:hover{color:#222}@media(max-width:900px){.page{width:min(100% - 28px,680px);padding:28px 0 48px}.toolbar{margin-bottom:14px}.app-head{margin-bottom:28px;gap:14px}.app-icon{width:72px;height:72px;border-radius:18px;font-size:13px}.app-identity{gap:13px}.app-copy h1{font-size:25px}.app-copy p{font-size:13px}.download{min-width:88px;height:42px;padding:0 18px;font-size:15px}.grid{grid-template-columns:1fr;gap:18px}.card{border-radius:20px}.description{margin-top:42px;padding-top:32px}.header{height:64px}.header-inner,.footer{width:calc(100% - 28px)}.footer{flex-direction:column;gap:10px}}@media(max-width:520px){.app-head{align-items:flex-start}.app-copy p{max-width:155px}.download{margin-top:14px}}
 </style>
 </head>
 <body>
-<header class="header">
-  <div class="header-inner">
-    <a class="logo" href="#">SNAP LOG</a>
-    <a class="back" href="../">Ziaside로 돌아가기</a>
-  </div>
-</header>
+<header class="header"><div class="header-inner"><a class="logo" href="#">SNAP LOG</a><a class="back" href="../" data-i18n="back">Ziaside로 돌아가기</a></div></header>
 <main class="page">
-  <section class="app-head" aria-label="SnapLog 다운로드">
-    <div class="app-identity">
-      <div class="app-icon" aria-hidden="true">SNAP<br>LOG</div>
-      <div class="app-copy"><h1>SnapLog</h1><p>흩어진 기록을 하나의 로그로</p></div>
-    </div>
-    <a class="download" href="https://apps.apple.com/us/app/id6800627643" target="_blank" rel="noopener noreferrer" aria-label="App Store에서 SnapLog 다운로드">받기</a>
-  </section>
-  <section class="grid" aria-label="SnapLog App Store screenshots">
-    <figure class="card"><img src="https://www.figma.com/api/mcp/asset/f547c1a0-e0a7-4883-bf24-23346f8772fd.png" alt="SnapLog 앱스토어 스크린샷 1"></figure>
-    <figure class="card"><img src="https://www.figma.com/api/mcp/asset/81401d9e-dc7a-4724-8488-6302f7205893.png" alt="SnapLog 앱스토어 스크린샷 2"></figure>
-    <figure class="card"><img src="https://www.figma.com/api/mcp/asset/086613e8-513f-4d28-9a83-4c36082f1d8b.png" alt="SnapLog 앱스토어 스크린샷 3"></figure>
-  </section>
+<div class="toolbar"><select id="language" class="lang" aria-label="Language"><option value="ko">한국어</option><option value="en">English</option><option value="ja">日本語</option><option value="zh-Hans">简体中文</option><option value="zh-Hant">繁體中文</option><option value="es">Español</option><option value="vi">Tiếng Việt</option></select></div>
+<section class="app-head"><div class="app-identity"><div class="app-icon" aria-hidden="true">SNAP<br>LOG</div><div class="app-copy"><h1>SnapLog</h1><p id="subtitle">흩어진 기록을 하나의 로그로</p></div></div><a class="download" href="https://apps.apple.com/app/id6800627643" target="_blank" rel="noopener noreferrer" id="download">받기</a></section>
+<section class="grid" aria-label="SnapLog App Store screenshots"><figure class="card"><img src="https://www.figma.com/api/mcp/asset/f547c1a0-e0a7-4883-bf24-23346f8772fd.png" alt="SnapLog screenshot 1"></figure><figure class="card"><img src="https://www.figma.com/api/mcp/asset/81401d9e-dc7a-4724-8488-6302f7205893.png" alt="SnapLog screenshot 2"></figure><figure class="card"><img src="https://www.figma.com/api/mcp/asset/086613e8-513f-4d28-9a83-4c36082f1d8b.png" alt="SnapLog screenshot 3"></figure></section>
+<section class="description" id="description"></section>
 </main>
-<footer class="footer">
-  <span>© 2026 Ziaside</span>
-  <div class="footer-links"><a href="./feedback/">피드백 보내기</a><a href="./terms/">이용약관</a><a href="./privacy/">개인정보처리방침</a><span>SnapLog · iOS</span></div>
-</footer>
-</body>
-</html>
+<footer class="footer"><span>© 2026 Ziaside</span><div class="footer-links"><a href="./feedback/" data-i18n="feedback">피드백 보내기</a><a href="./terms/" data-i18n="terms">이용약관</a><a href="./privacy/" data-i18n="privacy">개인정보처리방침</a><span>SnapLog · iOS</span></div></footer>
+<script>
+const copy={
+ko:{back:'Ziaside로 돌아가기',get:'받기',subtitle:'흩어진 기록을 하나의 로그로',feedback:'피드백 보내기',terms:'이용약관',privacy:'개인정보처리방침',html:`<h2>흩어진 기록을 하나의 로그로.</h2><p>운동, 식단, 반려동물, 취미, 일상까지. 여러 앱에 나뉘어 있던 기록을 이제 SnapLog 하나에 모아보세요.</p><p>SnapLog는 사진 한 장과 숫자 또는 짧은 코멘트로 다양한 일상의 기록을 간편하게 남길 수 있는 기록 앱입니다.</p><h3>원하는 주제로 자유롭게 기록하세요</h3><p>운동, 식단, 체중, 반려동물, 취미, 영화, 일상 등 원하는 주제를 만들고 각각의 기록을 한곳에서 관리할 수 있어요.</p><h3>사진과 함께 간단하게</h3><p>사진 한 장에 숫자 또는 짧은 코멘트를 더해 빠르게 기록할 수 있어요.</p><h3>달력으로 한눈에</h3><p>날짜마다 쌓인 사진을 달력에서 한눈에 확인하고, 지난 기록을 자연스럽게 돌아볼 수 있어요.</p><h3>기록한 변화는 통계로</h3><p>기록한 Snap은 월별 통계로 확인할 수 있어요.</p><h3>한 달의 기록을 한 장으로</h3><p>월간 기록을 이미지로 만들어 저장하거나 공유할 수 있어요.</p><p>특별한 하루부터 매일 반복되는 작은 변화까지. SnapLog로 나만의 기록을 차곡차곡 쌓아보세요.</p>`},
+en:{back:'Back to Ziaside',get:'Get',subtitle:'All your records in one log',feedback:'Send Feedback',terms:'Terms of Use',privacy:'Privacy Policy',html:`<h2>Bring scattered records into one log.</h2><p>From workouts and meals to pets, hobbies, and everyday life, keep all your records together in SnapLog instead of spreading them across multiple apps.</p><p>SnapLog is a simple logging app that lets you record everyday moments with a photo, a number, or a short note.</p><h3>Create topics that fit your life</h3><p>Create topics for workouts, meals, weight, pets, hobbies, movies, daily life, and more, then manage each record in one place.</p><h3>Log quickly with photos</h3><p>Add a number or a short note to a photo and save your record in seconds.</p><h3>See everything on a calendar</h3><p>View your photos by date on a calendar and look back on past records with ease.</p><h3>Track changes with monthly stats</h3><p>Review your recorded Snaps through monthly statistics.</p><h3>Save a month in one image</h3><p>Turn your monthly records into an image you can save or share.</p><p>From special moments to small daily changes, build your own life log with SnapLog.</p>`},
+ja:{back:'Ziasideに戻る',get:'入手',subtitle:'散らばる記録を、ひとつのログに',feedback:'フィードバック',terms:'利用規約',privacy:'プライバシーポリシー',html:`<h2>散らばった記録を、ひとつのログに。</h2><p>運動、食事、ペット、趣味、日常まで。複数のアプリに分かれていた記録を、SnapLogひとつにまとめましょう。</p><p>SnapLogは、写真1枚に数字や短いメモを添えて、日々の記録を手軽に残せる記録アプリです。</p><h3>好きなテーマで自由に記録</h3><p>運動、食事、体重、ペット、趣味、映画、日常など、好きなテーマを作成して1か所で管理できます。</p><h3>写真と一緒に手軽に記録</h3><p>写真1枚に数字や短いコメントを加えるだけで、すばやく記録できます。</p><h3>カレンダーでひと目で確認</h3><p>日付ごとにたまった写真をカレンダーで一覧し、過去の記録も自然に振り返れます。</p><h3>変化は月ごとの統計で</h3><p>記録したSnapを月ごとの統計で確認できます。</p><h3>1か月の記録を1枚に</h3><p>月間の記録を画像にして保存したり、共有したりできます。</p><p>特別な一日から毎日の小さな変化まで。SnapLogで自分だけの記録を積み重ねてみましょう。</p>`},
+'zh-Hans':{back:'返回 Ziaside',get:'获取',subtitle:'零散记录，汇成一个日志',feedback:'发送反馈',terms:'使用条款',privacy:'隐私政策',html:`<h2>把零散记录，汇成一个日志。</h2><p>无论是运动、饮食、宠物、兴趣，还是日常生活，都可以不再分散在多个应用里，而是统一记录在 SnapLog 中。</p><p>SnapLog 是一款简单的记录应用，你可以通过一张照片、一个数字或一段简短文字，轻松记录生活中的点滴。</p><h3>按你喜欢的主题自由记录</h3><p>创建运动、饮食、体重、宠物、兴趣、电影、日常等不同主题，并在一个地方统一管理。</p><h3>结合照片，轻松记录</h3><p>在一张照片上添加数字或简短备注，就能快速完成记录。</p><h3>通过日历一目了然</h3><p>按日期查看累积的照片，轻松回顾过去的记录。</p><h3>用月度统计查看变化</h3><p>通过每月统计查看已记录的 Snap。</p><h3>把一个月的记录保存成一张图</h3><p>将月度记录生成图片，保存或分享。</p><p>无论是特别的一天，还是每天的小变化，都可以在 SnapLog 中慢慢积累。</p>`},
+'zh-Hant':{back:'返回 Ziaside',get:'取得',subtitle:'零散記錄，匯成一個日誌',feedback:'傳送意見',terms:'使用條款',privacy:'隱私權政策',html:`<h2>將零散的記錄，匯成一個日誌。</h2><p>無論是運動、飲食、寵物、興趣，還是日常生活，都不用再分散在多個 App 中，而是統一記錄在 SnapLog 裡。</p><p>SnapLog 是一款簡單的記錄 App，你可以用一張照片、一個數字或一段簡短文字，輕鬆記下生活中的片段。</p><h3>依照你想要的主題自由記錄</h3><p>建立運動、飲食、體重、寵物、興趣、電影、日常等不同主題，並在同一個地方管理。</p><h3>搭配照片，輕鬆記錄</h3><p>在照片上加入數字或簡短備註，就能快速完成記錄。</p><h3>用日曆一目了然地查看</h3><p>依日期查看累積的照片，輕鬆回顧過去的記錄。</p><h3>用每月統計查看變化</h3><p>透過每月統計查看已記錄的 Snap。</p><h3>將一個月的記錄保存成一張圖片</h3><p>把每月記錄製作成圖片，方便保存或分享。</p><p>不論是特別的一天，還是每天的小小變化，都能在 SnapLog 裡慢慢累積。</p>`},
+es:{back:'Volver a Ziaside',get:'Obtener',subtitle:'Tus registros en un solo lugar',feedback:'Enviar comentarios',terms:'Términos de uso',privacy:'Política de privacidad',html:`<h2>Reúne tus registros en un solo lugar.</h2><p>Desde ejercicio y comidas hasta mascotas, hobbies y vida diaria, guarda todo en SnapLog en lugar de usar varias apps.</p><p>SnapLog es una app sencilla para registrar tu día a día con una foto, un número o una nota breve.</p><h3>Crea temas según tu estilo de vida</h3><p>Crea temas para ejercicio, comidas, peso, mascotas, hobbies, películas y más, y administra tus registros en un solo lugar.</p><h3>Registra de forma rápida con fotos</h3><p>Añade un número o una nota breve a una foto y guarda tu registro en segundos.</p><h3>Ve todo de un vistazo en el calendario</h3><p>Consulta tus fotos por fecha y revisa fácilmente tus registros anteriores.</p><h3>Sigue los cambios con estadísticas mensuales</h3><p>Revisa tus Snaps mediante estadísticas mensuales.</p><h3>Guarda un mes entero en una sola imagen</h3><p>Convierte tus registros mensuales en una imagen para guardarla o compartirla.</p><p>Desde momentos especiales hasta pequeños cambios del día a día, construye tu propio registro con SnapLog.</p>`},
+vi:{back:'Quay lại Ziaside',get:'Nhận',subtitle:'Gom mọi ghi chép vào một nhật ký',feedback:'Gửi phản hồi',terms:'Điều khoản sử dụng',privacy:'Chính sách quyền riêng tư',html:`<h2>Gom mọi ghi chép rời rạc vào một nhật ký.</h2><p>Từ tập luyện, ăn uống, thú cưng, sở thích đến cuộc sống hằng ngày, bạn có thể lưu tất cả trong SnapLog thay vì dùng nhiều ứng dụng khác nhau.</p><p>SnapLog là ứng dụng ghi chép đơn giản giúp bạn lưu lại cuộc sống bằng một bức ảnh, một con số hoặc một ghi chú ngắn.</p><h3>Tạo chủ đề theo cách của bạn</h3><p>Tạo các chủ đề như tập luyện, ăn uống, cân nặng, thú cưng, sở thích, phim ảnh và quản lý tất cả trong một nơi.</p><h3>Ghi lại nhanh chóng cùng ảnh</h3><p>Thêm một con số hoặc ghi chú ngắn vào ảnh để lưu bản ghi chỉ trong vài giây.</p><h3>Xem lại dễ dàng bằng lịch</h3><p>Xem ảnh theo từng ngày trên lịch và nhìn lại các ghi chép cũ thuận tiện.</p><h3>Theo dõi thay đổi bằng thống kê hàng tháng</h3><p>Xem lại các Snap đã ghi qua thống kê theo tháng.</p><h3>Lưu cả tháng trong một hình ảnh</h3><p>Biến các ghi chép hàng tháng thành một hình ảnh để lưu hoặc chia sẻ.</p><p>Từ khoảnh khắc đặc biệt đến những thay đổi nhỏ mỗi ngày, hãy tích lũy nhật ký của riêng bạn với SnapLog.</p>`}}
+function apply(l){const c=copy[l]||copy.ko;document.documentElement.lang=l;document.getElementById('subtitle').textContent=c.subtitle;document.getElementById('download').textContent=c.get;document.getElementById('description').innerHTML=c.html;document.querySelector('[data-i18n="back"]').textContent=c.back;document.querySelector('[data-i18n="feedback"]').textContent=c.feedback;document.querySelector('[data-i18n="terms"]').textContent=c.terms;document.querySelector('[data-i18n="privacy"]').textContent=c.privacy;localStorage.setItem('snaplog-lang',l)}
+const select=document.getElementById('language');const saved=localStorage.getItem('snaplog-lang');const browser=navigator.language||'ko';let initial=saved||(['ko','en','ja','es','vi'].includes(browser.slice(0,2))?browser.slice(0,2):browser.startsWith('zh-TW')||browser.startsWith('zh-HK')?'zh-Hant':browser.startsWith('zh')?'zh-Hans':'ko');select.value=copy[initial]?initial:'ko';apply(select.value);select.addEventListener('change',e=>apply(e.target.value));
+</script>
+</body></html>
