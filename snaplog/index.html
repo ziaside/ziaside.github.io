@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SnapLog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="SnapLog App Store Preview">
+<title>SnapLog</title>
 <style>
-:root{--b:#4285f4;--ink:#222;--muted:#747b86;--line:#e9edf3;--pale:#f4f8ff}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR",sans-serif;color:var(--ink);background:#fff}a{text-decoration:none;color:inherit}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}header{height:72px;display:flex;align-items:center;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);z-index:10}.nav{display:flex;justify-content:space-between;align-items:center}.logo{font-weight:900;letter-spacing:-.05em}.back{font-size:14px;color:var(--muted)}
-.hero{padding:88px 0 80px;overflow:hidden}.heroGrid{display:grid;grid-template-columns:1fr .9fr;align-items:center;gap:48px}.kicker{font-size:15px;color:var(--b);font-weight:700;margin-bottom:18px}.hero h1{font-size:clamp(52px,7vw,88px);line-height:1.16;letter-spacing:-.055em;margin:0}.hero p{font-size:22px;line-height:1.78;color:#4b5159;margin:30px 0 0;max-width:560px}.heroVisual{position:relative;min-height:620px}.blob{position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,#e7fbff 0,#edf5ff 55%,transparent 72%);right:-80px;top:20px}.heroVisual img{position:absolute;width:390px;right:40px;top:0;filter:drop-shadow(0 26px 34px rgba(70,77,90,.18));border-radius:34px}
-.ribbon{overflow:hidden;padding:14px 0 70px}.row{display:flex;gap:12px;width:max-content;animation:marquee 32s linear infinite}.pill{padding:13px 18px;border:1px solid #dfeaff;border-radius:999px;background:#fff;font-weight:650;white-space:nowrap}@keyframes marquee{to{transform:translateX(-33.33%)}}
-.story{padding:120px 0}.story.alt{background:#f8fbff}.storyGrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}.story.reverse .copy{order:2}.story.reverse .visual{order:1}.num{font-size:13px;color:var(--b);font-weight:800;letter-spacing:.1em}.copy h2{font-size:clamp(38px,5vw,64px);line-height:1.24;letter-spacing:-.045em;margin:14px 0 22px}.copy p{font-size:18px;line-height:1.86;color:var(--muted);max-width:480px}.phoneCard{background:#fff;border:1px solid var(--line);border-radius:40px;padding:30px;box-shadow:0 24px 60px rgba(74,85,104,.08)}.phoneCard img{display:block;width:min(100%,440px);margin:auto;border-radius:30px}
-.gallerySec{padding:120px 0;background:#20242a;color:#fff;overflow:hidden}.galleryHead{margin-bottom:52px}.galleryHead h2{font-size:clamp(42px,6vw,72px);letter-spacing:-.045em;line-height:1.22;margin:0}.galleryHead p{color:#b9c0ca;font-size:18px;line-height:1.8}.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.gallery img{width:100%;border-radius:28px;background:#fff}.gallery img:nth-child(2),.gallery img:nth-child(4){transform:translateY(48px)}
-.previewBand{padding:120px 0}.previewBand h2{text-align:center;font-size:clamp(40px,5vw,62px);letter-spacing:-.045em;line-height:1.22;margin:0 0 46px}.previews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.previews img{width:100%;border-radius:28px;border:1px solid var(--line)}
-.end{padding:130px 0;text-align:center;background:linear-gradient(180deg,#fff,#f1f7ff)}.end h2{font-size:clamp(46px,6vw,74px);letter-spacing:-.05em;line-height:1.2;margin:0}.end p{font-size:19px;line-height:1.75;color:var(--muted);margin:18px 0 0}.badge{display:inline-block;margin-top:26px;background:var(--b);color:#fff;padding:14px 20px;border-radius:12px;font-weight:750}footer{padding:30px 0;border-top:1px solid var(--line);color:#8a9099;font-size:13px}.foot{display:flex;justify-content:space-between}
-@media(max-width:800px){.heroGrid,.storyGrid{grid-template-columns:1fr}.heroVisual{min-height:560px}.heroVisual img{right:50%;transform:translateX(50%)}.story.reverse .copy,.story.reverse .visual{order:initial}.gallery{grid-template-columns:repeat(2,1fr)}.previews{grid-template-columns:1fr}.gallery img:nth-child(2),.gallery img:nth-child(4){transform:none}.hero h1{line-height:1.18}.copy h2,.galleryHead h2,.previewBand h2,.end h2{line-height:1.26}}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff;color:#222}
+body{font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.header{height:72px;border-bottom:1px solid #eceff3;display:flex;align-items:center}
+.header-inner{width:min(1440px,calc(100% - 48px));margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:18px;font-weight:800;letter-spacing:-.04em}
+.back{font-size:14px;color:#737982}
+.page{width:min(1560px,calc(100% - 64px));margin:0 auto;padding:64px 0 80px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:start}
+.card{background:#fff;border:1px solid #edf0f4;border-radius:28px;overflow:hidden;box-shadow:0 14px 40px rgba(34,34,34,.06)}
+.card img{display:block;width:100%;height:auto}
+.footer{width:min(1440px,calc(100% - 48px));margin:0 auto;padding:28px 0 36px;border-top:1px solid #eceff3;color:#8b9199;font-size:12px;display:flex;justify-content:space-between}
+@media(max-width:900px){
+ .page{width:min(100% - 28px,680px);padding:28px 0 48px}
+ .grid{grid-template-columns:1fr;gap:18px}
+ .card{border-radius:20px}
+ .header{height:64px}
+ .header-inner,.footer{width:calc(100% - 28px)}
+ .footer{flex-direction:column;gap:8px}
+}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="logo" href="#">SNAP LOG</a><a class="back" href="../">Ziaside로 돌아가기</a></div></header>
-<main>
-<section class="hero"><div class="wrap heroGrid"><div><div class="kicker">ONE APP, MANY LOGS</div><h1>기록마다<br>앱을 바꾸지<br>마세요.</h1><p>운동도, 식단도, 반려동물도, 리뷰도.<br>사진 한 장에서 시작해 한곳에 쌓아두는 나만의 기록 앱.</p></div><div class="heroVisual"><div class="blob"></div><img src="https://www.figma.com/api/mcp/asset/86a3bc2b-245e-44c3-af52-dd2bb1527dd8.png" alt="SnapLog 달력 화면"></div></div></section>
-<section class="ribbon"><div class="row"><span class="pill">💪 운동 기록</span><span class="pill">🥗 식단 기록</span><span class="pill">🐶 반려동물 기록</span><span class="pill">🎥 영화 리뷰</span><span class="pill">📝 스터디 기록</span><span class="pill">💵 지출 기록</span><span class="pill">🖼 사진 기록</span><span class="pill">🪴 식물 성장기</span><span class="pill">💪 운동 기록</span><span class="pill">🥗 식단 기록</span><span class="pill">🐶 반려동물 기록</span><span class="pill">🎥 영화 리뷰</span></div></section>
-<section class="story alt"><div class="wrap storyGrid"><div class="copy"><div class="num">01 / MAKE IT YOURS</div><h2>내가 기록할<br>주제부터 만들어요.</h2><p>정해진 카테고리에 맞추지 않아도 돼요. 이름과 이모지, 색상을 골라 지금 필요한 기록을 직접 만듭니다.</p></div><div class="visual phoneCard"><img src="https://www.figma.com/api/mcp/asset/c9496e53-f96a-4859-84f0-acf7234cb410.png" alt="주제 추가 화면"></div></div></section>
-<section class="story reverse"><div class="wrap storyGrid"><div class="copy"><div class="num">02 / QUICK LOG</div><h2>사진과 한 줄이면<br>기록은 끝.</h2><p>사진에 숫자, 한 줄, 시간, 별점 중 필요한 것만 더하세요. 복잡하게 쓰지 않아도 기록은 충분히 남습니다.</p></div><div class="visual phoneCard"><img src="https://www.figma.com/api/mcp/asset/b2245490-9a91-4bde-94e9-8763005d29ca.png" alt="기록 작성 화면"></div></div></section>
-<section class="gallerySec"><div class="wrap"><div class="galleryHead"><h2>쌓일수록,<br>한눈에 보이니까.</h2><p>달력 · 썸네일 · 통계 · 월간 기록까지 실제 SnapLog 화면으로 확인해보세요.</p></div><div class="gallery"><img src="https://www.figma.com/api/mcp/asset/983d8ad6-cc84-4b11-8012-68a2a8ddd8e4.png"><img src="https://www.figma.com/api/mcp/asset/b23bd63b-3567-45de-8b9a-71dc3e97f157.png"><img src="https://www.figma.com/api/mcp/asset/601e95dc-e4e9-478c-8057-0129355132b9.png"><img src="https://www.figma.com/api/mcp/asset/2f73ada5-40e2-4eb8-b6b5-0d2a6cf4bbab.png"><img src="https://www.figma.com/api/mcp/asset/62211829-7844-4636-838e-0b3e4992d7ed.png"><img src="https://www.figma.com/api/mcp/asset/5de42c2f-0246-48e6-bb6a-ec755ab2c6b1.png"><img src="https://www.figma.com/api/mcp/asset/91757098-cde6-4004-86aa-44514db31a50.png"><img src="https://www.figma.com/api/mcp/asset/464f9ca0-c7cf-4e62-98e5-0a88bd71d9aa.png"></div></div></section>
-<section class="previewBand"><div class="wrap"><h2>SnapLog의 핵심을<br>세 장에 담았어요.</h2><div class="previews"><img src="https://www.figma.com/api/mcp/asset/81401d9e-dc7a-4724-8488-6302f7205893.png"><img src="https://www.figma.com/api/mcp/asset/086613e8-513f-4d28-9a83-4c36082f1d8b.png"><img src="https://www.figma.com/api/mcp/asset/f547c1a0-e0a7-4883-bf24-23346f8772fd.png"></div></div></section>
-<section class="end"><div class="wrap"><h2>흩어진 기록을<br>하나의 로그로.</h2><p>SnapLog는 iOS에서 곧 만날 수 있어요.</p><span class="badge">Coming Soon on iOS</span></div></section>
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="#">SNAP LOG</a>
+    <a class="back" href="../">Ziaside로 돌아가기</a>
+  </div>
+</header>
+<main class="page">
+  <section class="grid" aria-label="SnapLog App Store screenshots">
+    <figure class="card"><img src="https://www.figma.com/api/mcp/asset/81401d9e-dc7a-4724-8488-6302f7205893.png" alt="SnapLog 앱스토어 스크린샷 1"></figure>
+    <figure class="card"><img src="https://www.figma.com/api/mcp/asset/086613e8-513f-4d28-9a83-4c36082f1d8b.png" alt="SnapLog 앱스토어 스크린샷 2"></figure>
+    <figure class="card"><img src="https://www.figma.com/api/mcp/asset/f547c1a0-e0a7-4883-bf24-23346f8772fd.png" alt="SnapLog 앱스토어 스크린샷 3"></figure>
+  </section>
 </main>
-<footer><div class="wrap foot"><span>© 2026 Ziaside</span><span>SnapLog · iOS</span></div></footer>
-</body></html>
+<footer class="footer"><span>© 2026 Ziaside</span><span>SnapLog · iOS</span></footer>
+</body>
+</html>
