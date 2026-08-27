@@ -10,8 +10,10 @@
 body{margin:0;background:#fff;color:#222;font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR","Segoe UI",sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased}
 a{color:#4285f4;text-decoration:none}
 .wrap{width:min(780px,calc(100% - 40px));margin:0 auto;padding:64px 0 90px}
-.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:56px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:56px}
+.top-actions{display:flex;align-items:center;justify-content:flex-end;gap:16px}
 .brand{font-weight:800;color:#222}.back{font-size:14px;color:#737982}
+.lang{appearance:none;-webkit-appearance:none;height:42px;min-width:132px;padding:0 36px 0 14px;border:1px solid #dfe3e8;border-radius:12px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23222' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 11px center;background-size:14px;font:inherit;font-size:14px;color:#4f5660}
 h1{font-size:42px;letter-spacing:-.04em;margin:0 0 12px}
 .lead{font-size:16px;color:#737982;margin:0 0 42px}
 h2{font-size:20px;margin:38px 0 10px}
@@ -23,50 +25,92 @@ ul{padding-left:20px}
 .note{margin-top:34px;padding:20px 22px;background:#f7f9fc;border-radius:16px;color:#737982;font-size:14px}
 .footer{margin-top:56px;padding-top:24px;border-top:1px solid #eceff3;color:#8b9199;font-size:12px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .footer-links{display:flex;gap:14px;flex-wrap:wrap}.footer-links a{color:#737982}.footer-links a:hover{color:#222}
-@media(max-width:600px){.wrap{padding-top:32px}h1{font-size:34px}.top{margin-bottom:40px}}
+@media(max-width:600px){.wrap{padding-top:32px}h1{font-size:34px}.top{align-items:flex-start;margin-bottom:40px}.top-actions{align-items:flex-end;flex-direction:column-reverse;gap:10px}.lang{min-width:118px;max-width:132px}}
 </style>
 </head>
 <body>
 <main class="wrap">
   <div class="top">
     <a class="brand" href="../">SNAP LOG</a>
-    <a class="back" href="../">← 돌아가기</a>
+    <div class="top-actions">
+      <a class="back" href="../" id="back">← 돌아가기</a>
+      <select id="language" class="lang" aria-label="Language"><option value="ko">한국어</option><option value="en">English</option><option value="ja">日本語</option><option value="zh-Hans">简体中文</option><option value="zh-Hant">繁體中文</option><option value="es">Español</option><option value="vi">Tiếng Việt</option></select>
+    </div>
   </div>
 
-  <h1>피드백 보내기</h1>
-  <p class="lead">SnapLog를 사용하며 느낀 점, 불편한 점, 원하는 기능을 자유롭게 알려주세요.</p>
+  <h1 id="title">피드백 보내기</h1>
+  <p class="lead" id="lead">SnapLog를 사용하며 느낀 점, 불편한 점, 원하는 기능을 자유롭게 알려주세요.</p>
 
   <div class="card">
-    <strong>이메일로 보내기</strong>
-    <p>아래 이메일로 문의를 보내주시면 확인 후 필요한 경우 답변드리겠습니다.</p>
-    <a class="mail" href="mailto:ziaa3761@gmail.com?subject=%5BSnapLog%20%ED%94%BC%EB%93%9C%EB%B0%B1%5D">ziaa3761@gmail.com</a>
+    <strong id="emailTitle">이메일로 보내기</strong>
+    <p id="emailBody">아래 이메일로 문의를 보내주시면 확인 후 필요한 경우 답변드리겠습니다.</p>
+    <a class="mail" id="emailLink" href="mailto:ziaa3761@gmail.com?subject=%5BSnapLog%20%ED%94%BC%EB%93%9C%EB%B0%B1%5D">ziaa3761@gmail.com</a>
   </div>
 
-  <h2>어떤 내용을 보내면 좋나요?</h2>
-  <ul>
-    <li>사용 중 발견한 오류나 이상한 동작</li>
-    <li>사용하기 불편하거나 헷갈렸던 부분</li>
-    <li>추가되었으면 하는 기능이나 개선 아이디어</li>
-    <li>번역이나 화면 표시가 자연스럽지 않은 부분</li>
-    <li>그 밖의 SnapLog 관련 문의</li>
-  </ul>
+  <h2 id="topicsTitle">어떤 내용을 보내면 좋나요?</h2>
+  <ul id="topics"></ul>
 
-  <h2>오류를 제보할 때</h2>
-  <p>가능하다면 사용 중인 iPhone 기종, iOS 버전, 문제가 발생한 화면과 상황을 함께 적어주세요. 스크린샷이 있다면 문제를 확인하는 데 도움이 됩니다.</p>
+  <h2 id="bugTitle">오류를 제보할 때</h2>
+  <p id="bugBody">가능하다면 사용 중인 iPhone 기종, iOS 버전, 문제가 발생한 화면과 상황을 함께 적어주세요. 스크린샷이 있다면 문제를 확인하는 데 도움이 됩니다.</p>
 
-  <h2>개인정보 안내</h2>
-  <p>문의에 포함된 이메일 주소와 사용자가 직접 제공한 내용은 문의 확인 및 답변을 위해서만 사용합니다. 비밀번호, 결제수단 정보 등 민감한 정보는 보내지 마세요.</p>
+  <h2 id="privacyTitle">개인정보 안내</h2>
+  <p id="privacyBody">문의에 포함된 이메일 주소와 사용자가 직접 제공한 내용은 문의 확인 및 답변을 위해서만 사용합니다. 비밀번호, 결제수단 정보 등 민감한 정보는 보내지 마세요.</p>
 
-  <div class="note">SnapLog는 더 나은 기록 경험을 만들기 위해 보내주신 의견을 참고합니다. 모든 제안이 반드시 기능으로 반영되는 것은 아니지만, 보내주신 피드백은 제품 개선에 소중하게 활용됩니다.</div>
+  <div class="note" id="note">SnapLog는 더 나은 기록 경험을 만들기 위해 보내주신 의견을 참고합니다. 모든 제안이 반드시 기능으로 반영되는 것은 아니지만, 보내주신 피드백은 제품 개선에 소중하게 활용됩니다.</div>
 
   <div class="footer">
     <span>© 2026 Ziaside</span>
     <div class="footer-links">
-      <a href="../terms/">이용약관</a>
-      <a href="../privacy/">개인정보처리방침</a>
-      <a href="./">피드백 보내기</a>
+      <a href="../terms/" id="terms">이용약관</a>
+      <a href="../privacy/" id="privacy">개인정보처리방침</a>
+      <a href="./" id="feedback">피드백 보내기</a>
     </div>
   </div>
 </main>
+<script>
+const copy={
+ko:{description:'SnapLog 피드백 및 문의',pageTitle:'SnapLog 피드백 보내기',back:'← 돌아가기',title:'피드백 보내기',lead:'SnapLog를 사용하며 느낀 점, 불편한 점, 원하는 기능을 자유롭게 알려주세요.',emailTitle:'이메일로 보내기',emailBody:'아래 이메일로 문의를 보내주시면 확인 후 필요한 경우 답변드리겠습니다.',subject:'[SnapLog 피드백]',topicsTitle:'어떤 내용을 보내면 좋나요?',topics:['사용 중 발견한 오류나 이상한 동작','사용하기 불편하거나 헷갈렸던 부분','추가되었으면 하는 기능이나 개선 아이디어','번역이나 화면 표시가 자연스럽지 않은 부분','그 밖의 SnapLog 관련 문의'],bugTitle:'오류를 제보할 때',bugBody:'가능하다면 사용 중인 iPhone 기종, iOS 버전, 문제가 발생한 화면과 상황을 함께 적어주세요. 스크린샷이 있다면 문제를 확인하는 데 도움이 됩니다.',privacyTitle:'개인정보 안내',privacyBody:'문의에 포함된 이메일 주소와 사용자가 직접 제공한 내용은 문의 확인 및 답변을 위해서만 사용합니다. 비밀번호, 결제수단 정보 등 민감한 정보는 보내지 마세요.',note:'SnapLog는 더 나은 기록 경험을 만들기 위해 보내주신 의견을 참고합니다. 모든 제안이 반드시 기능으로 반영되는 것은 아니지만, 보내주신 피드백은 제품 개선에 소중하게 활용됩니다.',terms:'이용약관',privacy:'개인정보처리방침',feedback:'피드백 보내기'},
+en:{description:'SnapLog feedback and contact',pageTitle:'Send SnapLog Feedback',back:'← Back',title:'Send Feedback',lead:'Tell us what you think about SnapLog, what could be easier, or what features you would like to see.',emailTitle:'Send us an email',emailBody:'Send your inquiry to the email address below. We will review it and reply when needed.',subject:'[SnapLog Feedback]',topicsTitle:'What can I send?',topics:['Bugs or unexpected behavior','Anything confusing or difficult to use','Feature requests or improvement ideas','Unnatural translations or display issues','Any other questions about SnapLog'],bugTitle:'When reporting a bug',bugBody:'If possible, include your iPhone model, iOS version, and the screen and situation where the issue occurred. A screenshot can also help us investigate.',privacyTitle:'Privacy notice',privacyBody:'Your email address and the information you provide will be used only to review and respond to your inquiry. Do not send sensitive information such as passwords or payment details.',note:'Your feedback helps us create a better logging experience. We cannot promise that every suggestion will become a feature, but every message is valuable as we improve SnapLog.',terms:'Terms of Use',privacy:'Privacy Policy',feedback:'Send Feedback'},
+ja:{description:'SnapLogへのフィードバック・お問い合わせ',pageTitle:'SnapLogへフィードバックを送る',back:'← 戻る',title:'フィードバックを送る',lead:'SnapLogを使って感じたこと、不便な点、追加してほしい機能などを自由にお知らせください。',emailTitle:'メールで送る',emailBody:'以下のメールアドレスにお問い合わせください。内容を確認し、必要に応じて返信いたします。',subject:'[SnapLog フィードバック]',topicsTitle:'どのような内容を送れますか？',topics:['使用中に見つけた不具合や予期しない動作','使いにくい、または分かりにくい点','追加してほしい機能や改善案','不自然な翻訳や表示上の問題','その他のSnapLogに関するお問い合わせ'],bugTitle:'不具合を報告する場合',bugBody:'可能であれば、iPhoneの機種、iOSのバージョン、問題が発生した画面や状況をお知らせください。スクリーンショットも調査に役立ちます。',privacyTitle:'個人情報について',privacyBody:'メールアドレスとご提供いただいた内容は、お問い合わせの確認と返信のためにのみ使用します。パスワードや決済情報などの機密情報は送信しないでください。',note:'いただいたご意見は、より良い記録体験をつくるために活用します。すべてのご提案を機能として反映できるとは限りませんが、製品改善のため大切に参考にいたします。',terms:'利用規約',privacy:'プライバシーポリシー',feedback:'フィードバック'},
+'zh-Hans':{description:'SnapLog 反馈与联系',pageTitle:'发送 SnapLog 反馈',back:'← 返回',title:'发送反馈',lead:'欢迎告诉我们您使用 SnapLog 时的感受、遇到的不便以及希望增加的功能。',emailTitle:'发送邮件',emailBody:'请通过以下邮箱发送您的咨询。我们会进行查看，并在需要时回复。',subject:'[SnapLog 反馈]',topicsTitle:'可以发送哪些内容？',topics:['使用中发现的错误或异常行为','使用不便或令人困惑的部分','希望增加的功能或改进建议','不自然的翻译或显示问题','其他与 SnapLog 有关的咨询'],bugTitle:'报告错误时',bugBody:'请尽可能注明您的 iPhone 型号、iOS 版本，以及问题发生时的页面和具体情况。提供截图也有助于我们排查问题。',privacyTitle:'隐私说明',privacyBody:'您的邮箱地址和主动提供的内容仅用于查看并回复咨询。请勿发送密码、支付信息等敏感内容。',note:'您的意见将帮助我们打造更好的记录体验。我们无法保证每项建议都会成为新功能，但每一条反馈都会成为改进 SnapLog 的重要参考。',terms:'使用条款',privacy:'隐私政策',feedback:'发送反馈'},
+'zh-Hant':{description:'SnapLog 意見回饋與聯絡',pageTitle:'傳送 SnapLog 意見回饋',back:'← 返回',title:'傳送意見',lead:'歡迎告訴我們使用 SnapLog 時的感受、遇到的不便，以及希望新增的功能。',emailTitle:'傳送電子郵件',emailBody:'請透過以下電子郵件地址傳送您的詢問。我們會查看內容，並視需要回覆。',subject:'[SnapLog 意見回饋]',topicsTitle:'可以傳送哪些內容？',topics:['使用時發現的錯誤或異常行為','使用不便或令人困惑的部分','希望新增的功能或改善建議','不自然的翻譯或顯示問題','其他與 SnapLog 有關的詢問'],bugTitle:'回報錯誤時',bugBody:'請盡可能提供您的 iPhone 型號、iOS 版本，以及問題發生的畫面和情況。附上截圖也有助於我們確認問題。',privacyTitle:'隱私權說明',privacyBody:'您的電子郵件地址和主動提供的內容僅用於查看並回覆詢問。請勿傳送密碼、付款資訊等敏感內容。',note:'您的意見將協助我們打造更好的記錄體驗。我們無法保證每項建議都會成為新功能，但每一則回饋都是改善 SnapLog 的重要參考。',terms:'使用條款',privacy:'隱私權政策',feedback:'傳送意見'},
+es:{description:'Comentarios y contacto de SnapLog',pageTitle:'Enviar comentarios sobre SnapLog',back:'← Volver',title:'Enviar comentarios',lead:'Cuéntanos qué piensas de SnapLog, qué podría ser más fácil o qué funciones te gustaría ver.',emailTitle:'Envíanos un correo',emailBody:'Envía tu consulta a la dirección siguiente. La revisaremos y responderemos cuando sea necesario.',subject:'[Comentarios sobre SnapLog]',topicsTitle:'¿Qué puedo enviar?',topics:['Errores o comportamientos inesperados','Aspectos confusos o difíciles de usar','Solicitudes de funciones o ideas de mejora','Traducciones poco naturales o problemas de visualización','Cualquier otra consulta sobre SnapLog'],bugTitle:'Al informar de un error',bugBody:'Si es posible, incluye el modelo de iPhone, la versión de iOS y la pantalla y situación en las que ocurrió el problema. Una captura también puede ayudarnos a investigarlo.',privacyTitle:'Aviso de privacidad',privacyBody:'Tu correo y la información que proporciones se usarán únicamente para revisar y responder a tu consulta. No envíes datos sensibles, como contraseñas o información de pago.',note:'Tus comentarios nos ayudan a crear una mejor experiencia de registro. No podemos prometer que cada sugerencia se convierta en una función, pero cada mensaje es valioso para mejorar SnapLog.',terms:'Términos de uso',privacy:'Política de privacidad',feedback:'Enviar comentarios'},
+vi:{description:'Phản hồi và liên hệ SnapLog',pageTitle:'Gửi phản hồi về SnapLog',back:'← Quay lại',title:'Gửi phản hồi',lead:'Hãy chia sẻ cảm nhận của bạn về SnapLog, những điểm chưa thuận tiện hoặc tính năng bạn mong muốn.',emailTitle:'Gửi email cho chúng tôi',emailBody:'Hãy gửi câu hỏi đến địa chỉ email bên dưới. Chúng tôi sẽ xem xét và phản hồi khi cần.',subject:'[Phản hồi SnapLog]',topicsTitle:'Tôi có thể gửi nội dung gì?',topics:['Lỗi hoặc hoạt động bất thường khi sử dụng','Những phần khó dùng hoặc gây nhầm lẫn','Yêu cầu tính năng hoặc ý tưởng cải tiến','Bản dịch chưa tự nhiên hoặc lỗi hiển thị','Các câu hỏi khác về SnapLog'],bugTitle:'Khi báo lỗi',bugBody:'Nếu có thể, hãy cho biết mẫu iPhone, phiên bản iOS, màn hình và tình huống xảy ra lỗi. Ảnh chụp màn hình cũng sẽ giúp chúng tôi kiểm tra vấn đề.',privacyTitle:'Thông báo về quyền riêng tư',privacyBody:'Địa chỉ email và nội dung bạn cung cấp chỉ được dùng để xem xét và trả lời câu hỏi. Không gửi thông tin nhạy cảm như mật khẩu hoặc thông tin thanh toán.',note:'Phản hồi của bạn giúp chúng tôi tạo ra trải nghiệm ghi chép tốt hơn. Chúng tôi không thể đảm bảo mọi đề xuất đều trở thành tính năng, nhưng mỗi ý kiến đều rất quý giá để cải thiện SnapLog.',terms:'Điều khoản sử dụng',privacy:'Chính sách quyền riêng tư',feedback:'Gửi phản hồi'}
+};
+function normalizeLanguage(value){
+  if(copy[value])return value;
+  const locale=String(value||'').replace('_','-');
+  if(/^zh(?:-|$)/i.test(locale))return /(?:hant|tw|hk|mo)/i.test(locale)?'zh-Hant':'zh-Hans';
+  const base=locale.split('-')[0].toLowerCase();
+  return copy[base]?base:'ko';
+}
+function apply(language){
+  const lang=normalizeLanguage(language),t=copy[lang];
+  document.documentElement.lang=lang;
+  document.title=t.pageTitle;
+  document.querySelector('meta[name="description"]').content=t.description;
+  document.getElementById('back').textContent=t.back;
+  document.getElementById('title').textContent=t.title;
+  document.getElementById('lead').textContent=t.lead;
+  document.getElementById('emailTitle').textContent=t.emailTitle;
+  document.getElementById('emailBody').textContent=t.emailBody;
+  document.getElementById('emailLink').href='mailto:ziaa3761@gmail.com?subject='+encodeURIComponent(t.subject);
+  document.getElementById('topicsTitle').textContent=t.topicsTitle;
+  document.getElementById('topics').innerHTML=t.topics.map(item=>`<li>${item}</li>`).join('');
+  document.getElementById('bugTitle').textContent=t.bugTitle;
+  document.getElementById('bugBody').textContent=t.bugBody;
+  document.getElementById('privacyTitle').textContent=t.privacyTitle;
+  document.getElementById('privacyBody').textContent=t.privacyBody;
+  document.getElementById('note').textContent=t.note;
+  document.getElementById('terms').textContent=t.terms;
+  document.getElementById('privacy').textContent=t.privacy;
+  document.getElementById('feedback').textContent=t.feedback;
+  document.getElementById('language').value=lang;
+  localStorage.setItem('snaplogLang',lang);
+}
+const select=document.getElementById('language');
+apply(localStorage.getItem('snaplogLang')||navigator.language);
+select.addEventListener('change',event=>apply(event.target.value));
+</script>
 </body>
 </html>

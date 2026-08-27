@@ -13,7 +13,7 @@
 </head>
 <body>
   <main class="page">
-    <header class="topbar"><a class="brand" href="/">zia.log</a><nav class="topnav"><a href="https://github.com/ziaside" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:ziaa3761@gmail.com">Contact</a></nav></header>
+    <header class="topbar"><a class="brand" href="/">zia.log</a><nav class="topnav"><a href="https://github.com/ziaside" target="_blank" rel="noopener noreferrer">GitHub</a><a id="contact" href="mailto:ziaa3761@gmail.com">Contact</a></nav></header>
     <section class="hero"><h1>Ideas,<br />made into apps.</h1><div class="hero-copy">Personal app projects by Zia.</div></section>
     <section class="projects" id="apps">
       <div class="section-head"><h2>Selected Apps</h2><span>2026 —</span></div>
@@ -25,5 +25,18 @@
     </section>
     <footer class="footer"><div class="copyright">© 2026 zia.log</div></footer>
   </main>
+  <script>
+    const contactLabels={ko:'문의하기',en:'Contact',ja:'お問い合わせ','zh-Hans':'联系我们','zh-Hant':'聯絡我們',es:'Contacto',vi:'Liên hệ'};
+    function siteLanguage(value){
+      if(contactLabels[value])return value;
+      const locale=String(value||'').replace('_','-');
+      if(/^zh(?:-|$)/i.test(locale))return /(?:hant|tw|hk|mo)/i.test(locale)?'zh-Hant':'zh-Hans';
+      const base=locale.split('-')[0].toLowerCase();
+      return contactLabels[base]?base:'en';
+    }
+    const language=siteLanguage(localStorage.getItem('snaplogLang')||navigator.language);
+    document.documentElement.lang=language;
+    document.getElementById('contact').textContent=contactLabels[language];
+  </script>
 </body>
 </html>
