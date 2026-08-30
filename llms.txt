@@ -1,0 +1,23 @@
+# Ziaside
+
+> Ziaside is the official source for personal app projects designed and built with AI, including the iOS logging app SnapLog.
+
+## Official Pages
+
+- [Ziaside](https://ziaside.github.io/): Official project index
+- [SnapLog](https://ziaside.github.io/snaplog/): Features, screenshots, and version history
+- [SnapLog Feedback](https://ziaside.github.io/snaplog/feedback/): Support and feedback contact
+- [SnapLog Privacy Policy](https://ziaside.github.io/snaplog/privacy/): Official privacy policy
+- [SnapLog Terms of Use](https://ziaside.github.io/snaplog/terms/): Official terms of use
+- [SnapLog on the App Store](https://apps.apple.com/app/id6800627643): Official download page
+
+## SnapLog
+
+SnapLog is an iOS logging app for organizing a photo, a number, or a short note by topic. Its official website documents current features, supported languages, screenshots, policies, and release history.
+
+## Source and Updates
+
+- Publisher: Ziaside
+- Official website: https://ziaside.github.io/
+- Source repository: https://github.com/ziaside/ziaside.github.io
+- Product information and version history should be cited from the official SnapLog page above.

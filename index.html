@@ -3,8 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="zia.log — Personal app projects by Zia." />
+  <meta name="description" content="Ziaside는 디자인과 AI로 직접 만들어가는 개인 앱 프로젝트의 공식 사이트입니다. iOS 기록 앱 SnapLog의 기능, 업데이트와 지원 정보를 제공합니다." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://ziaside.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="zia.log — Ziaside" />
+  <meta property="og:description" content="디자인하고, AI로 직접 만들어가는 Ziaside의 개인 앱 프로젝트와 SnapLog를 소개합니다." />
+  <meta property="og:url" content="https://ziaside.github.io/" />
+  <meta property="og:site_name" content="Ziaside" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://ziaside.github.io/snaplog/assets/app%20logo.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="zia.log — Ziaside" />
+  <meta name="twitter:description" content="디자인하고, AI로 직접 만들어가는 Ziaside의 개인 앱 프로젝트와 SnapLog를 소개합니다." />
+  <meta name="twitter:image" content="https://ziaside.github.io/snaplog/assets/app%20logo.png" />
   <title>zia.log</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://ziaside.github.io/#organization",
+        "name": "Ziaside",
+        "url": "https://ziaside.github.io/",
+        "sameAs": ["https://github.com/ziaside"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ziaside.github.io/#website",
+        "url": "https://ziaside.github.io/",
+        "name": "zia.log",
+        "publisher": {"@id": "https://ziaside.github.io/#organization"},
+        "inLanguage": ["ko", "en", "ja", "zh-Hans", "zh-Hant", "es"]
+      }
+    ]
+  }
+  </script>
   <style>
     :root{--bg:#fff;--text:#111;--muted:#777772;--line:#e8e8e8;--card:#f5f5f5}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Pretendard","Noto Sans KR",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.page{width:min(1180px,calc(100% - 48px));margin:0 auto;min-height:100vh;padding:36px 0 28px;display:flex;flex-direction:column}.topbar{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:28px;border-bottom:1px solid var(--line)}.brand{font-size:18px;font-weight:700;letter-spacing:-.03em}.topnav{display:flex;align-items:center;gap:22px;font-size:14px;color:var(--muted)}.topnav a:hover{color:var(--text)}.lang{appearance:none;-webkit-appearance:none;height:34px;padding:0 30px 0 11px;border:1px solid var(--line);border-radius:999px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23777772' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 10px center;background-size:13px;font:inherit;font-size:12px;color:var(--muted)}.hero{padding:76px 0 86px;display:grid;grid-template-columns:1fr;gap:20px}.hero>*{min-width:0}.hero h1{margin:0;max-width:900px;padding:.06em 0;font-size:clamp(38px,6vw,76px);line-height:1.16;letter-spacing:-.05em;font-weight:700}.hero-copy{max-width:560px;font-size:16px;line-height:1.7;color:var(--muted)}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--line)}.section-head h2{margin:0;font-size:14px;font-weight:600;letter-spacing:.01em}.section-head span{font-size:13px;color:var(--muted)}.projects{margin-bottom:84px}.project{display:grid;grid-template-columns:72px 1fr auto;gap:24px;align-items:start;padding:30px 0 34px;border-bottom:1px solid var(--line);transition:opacity .18s ease}.project:hover{opacity:.62}.project-number{font-size:13px;color:var(--muted);padding-top:7px}.project-main{min-width:0}.project-title{display:flex;align-items:center;gap:14px;margin-bottom:10px}.project-icon{display:block;width:54px;height:54px;border-radius:13px;border:1px solid var(--line);box-shadow:0 6px 18px rgba(17,17,17,.06);object-fit:cover;flex:0 0 auto}.project-main h3{margin:0;font-size:clamp(30px,4vw,54px);line-height:1;letter-spacing:-.045em;font-weight:650}.project-main p{margin:0;max-width:650px;color:var(--muted);font-size:15px;line-height:1.7}.meta{min-width:150px;display:flex;flex-direction:column;align-items:flex-end;gap:8px;padding-top:3px}.status,.platform{display:inline-flex;align-items:center;justify-content:center;min-height:28px;padding:5px 10px 6px;border:1px solid var(--line);border-radius:999px;font-size:12px;white-space:nowrap}.status{background:var(--card)}.platform{color:var(--muted)}.footer{margin-top:auto;padding-top:22px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:24px;color:var(--muted);font-size:13px}.translation-note{font-size:11px;line-height:1.5;color:#999994}.copyright{text-align:right;white-space:nowrap}
@@ -51,6 +86,7 @@
       document.getElementById('translation-note').textContent=text.note;
       document.getElementById('language').value=language;
       document.getElementById('language').setAttribute('aria-label',text.language);
+      document.querySelector('meta[name="description"]').content=text.sub+' '+text.project;
       localStorage.setItem('snaplogLang',language);
     }
     const languageSelect=document.getElementById('language');
