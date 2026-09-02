@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ziaside는 디자인과 AI로 직접 만들어가는 개인 프로젝트의 공식 사이트입니다. iOS 기록 앱 SnapLog와 사진 펀칭 웹 도구 Punchy!를 소개합니다." />
+  <meta name="description" content="개인 프로젝트를 소개하는 사이트입니다." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="google-site-verification" content="eBwcdY9lb7KjOth6cu78arPySr23plOjOQCo0zQCzGQ" />
   <meta name="naver-site-verification" content="a1b1b5562d9e166958468381a3746a30eea82951" />
   <link rel="canonical" href="https://ziaside.github.io/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="zia.log — Ziaside" />
-  <meta property="og:description" content="디자인하고, AI로 직접 만들어가는 Ziaside의 SnapLog와 Punchy! 프로젝트를 소개합니다." />
+  <meta property="og:title" content="Zia.log" />
+  <meta property="og:description" content="디자인하고, AI로 만드는 법을 배워갑니다." />
   <meta property="og:url" content="https://ziaside.github.io/" />
   <meta property="og:site_name" content="Ziaside" />
   <meta property="og:locale" content="ko_KR" />
   <meta property="og:image" content="https://ziaside.github.io/snaplog/assets/app%20logo.png" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="zia.log — Ziaside" />
-  <meta name="twitter:description" content="디자인하고, AI로 직접 만들어가는 Ziaside의 SnapLog와 Punchy! 프로젝트를 소개합니다." />
+  <meta name="twitter:title" content="Zia.log" />
+  <meta name="twitter:description" content="디자인하고, AI로 만드는 법을 배워갑니다." />
   <meta name="twitter:image" content="https://ziaside.github.io/snaplog/assets/app%20logo.png" />
-  <title>Zia.log | AI로 만드는 개인 프로젝트</title>
+  <title>Zia.log</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -35,7 +35,7 @@
         "@type": "WebSite",
         "@id": "https://ziaside.github.io/#website",
         "url": "https://ziaside.github.io/",
-        "name": "zia.log",
+        "name": "Zia.log",
         "publisher": {"@id": "https://ziaside.github.io/#organization"},
         "inLanguage": ["ko", "en", "ja", "zh-Hans", "zh-Hant", "es"]
       }
@@ -94,7 +94,6 @@
       document.getElementById('translation-note').textContent=text.note;
       document.getElementById('language').value=language;
       document.getElementById('language').setAttribute('aria-label',text.language);
-      document.querySelector('meta[name="description"]').content=text.sub+' '+text.project+' '+text.punchy;
       localStorage.setItem('snaplogLang',language);
     }
     const languageSelect=document.getElementById('language');
