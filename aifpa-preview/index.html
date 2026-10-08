@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#08090a" />
+  <meta name="description" content="STUDIO AIFPA는 아이디어를 직관적인 경험으로 만드는 독립 디자인 스튜디오입니다. UX/UI, 앱 및 웹 인터페이스, 반응형 웹, 브랜드 비주얼을 설계합니다." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="canonical" href="https://ziaside.github.io/aifpa-preview/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="STUDIO AIFPA — Ideas into experiences" />
+  <meta property="og:description" content="아이디어를 명확하게, 경험을 세심하게. UX/UI · Product · Responsive Web · Visual Design" />
+  <meta property="og:url" content="https://ziaside.github.io/aifpa-preview/" />
+  
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308090a'/%3E%3Cpath d='m13 49 19-39 19 39M23 35h18' stroke='%23f7f8f8' fill='none' stroke-width='6'/%3E%3C/svg%3E" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>STUDIO AIFPA — Ideas into experiences</title>
+  <style>
+    :root {--canvas:#08090a;--surface:#0d0e10;--surface2:#121316;--surface3:#18191c;--hairline:rgba(255,255,255,.085);--hairline2:rgba(255,255,255,.13);--ink:#f7f8f8;--muted:#8a8f98;--silver:#c8cbd1;--accent:#7170ff;--accent2:#9695ff;--width:1184px;--ease:cubic-bezier(.2,.8,.2,1)}
+    *,*::before,*::after {box-sizing:border-box}
+    html {scroll-behavior:smooth;scroll-padding-top:96px}
+    body {margin:0;background:var(--canvas);color:var(--ink);font-family:Inter, 'Inter Variable','Pretendard','Noto Sans CJK KR','Noto Sans KR','Apple SD Gothic Neo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;word-break:keep-all;font-feature-settings:'cv01' 1,'ss03' 1}
+    ::selection {background:rgba(113,112,255,.4);color:white}
+    a {color:inherit;text-decoration:none}
+    button {font:inherit}
+    a:focus-visible,button:focus-visible {outline:2px solid var(--accent2);outline-offset:4px}
+    .container {width:min(var(--width),calc(100% - 88px));margin-inline:auto}
+    .sr-only {position:absolute;clip:rect(0,0,0,0);clip-path:inset(50%);height:1px;width:1px;overflow:hidden;white-space:nowrap}
+    .skip {position:absolute;left:16px;top:-80px;padding:11px 15px;border-radius:5px;background:#f7f8f8;color:#08090a;z-index:1000}.skip:focus {top:14px}
+    .icon {height:16px;width:16px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+    .wordmark {display:inline-flex;gap:9px;align-items:center;position:relative;font-size:19px;letter-spacing:-.07em;font-weight:680;white-space:nowrap}
+    .wordmark .wmark {display:inline-grid;place-items:center;width:21px;height:24px;transform:rotate(-18deg)}
+    .wordmark .wmark svg {height:24px;width:21px;fill:none;stroke:#eef0ff;stroke-width:3.2;stroke-linejoin:round}
+    .wordmark .brand-dot {color:#8988ff}
+    .site-header {height:76px;border-bottom:1px solid var(--hairline);position:relative;z-index:50;background:rgba(8,9,10,.94)}
+    .site-header .container {height:100%;display:flex;align-items:center;justify-content:space-between}
+    .site-nav {height:100%;display:flex;align-items:center;gap:38px}
+    .site-nav a {font-size:13px;font-weight:510;letter-spacing:-.01em;color:#a7aab3;transition:color .2s ease}
+    .site-nav a:hover,.site-nav a[aria-current='page'] {color:#fff}
+    .site-nav .nav-contact {color:var(--ink);background:rgba(255,255,255,.055);border:1px solid var(--hairline2);border-radius:6px;padding:10px 13px;display:inline-flex;align-items:center;gap:14px;transition:background .2s ease,border-color .2s ease}
+    .site-nav .nav-contact:hover {border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.1)}
+    .menu-toggle {display:none;background:transparent;border:1px solid var(--hairline2);color:#fff;border-radius:7px;padding:10px;cursor:pointer}
+    .menu-toggle svg{width:18px;height:18px;display:block}
+    .hero {padding-top:124px;position:relative;overflow:hidden}
+    .hero-content {position:relative;z-index:2}
+    .overline {display:flex;align-items:center;gap:11px;font-size:11px;letter-spacing:.16em;font-weight:590;color:#a5a7b1;text-transform:uppercase}
+    .overline::before {content:'';width:6px;height:6px;background:#8886ff;border-radius:50%;box-shadow:0 0 14px rgba(113,112,255,.5)}
+    .hero h1 {font-size:clamp(55px,6.2vw,88px);font-weight:560;letter-spacing:-.073em;line-height:1.075;margin:31px 0 26px;max-width:1060px}
+    .hero h1 span{color:#9698a3}
+    .hero-bottom {display:flex;align-items:flex-end;justify-content:space-between;gap:30px}
+    .hero-description {font-size:17px;letter-spacing:-.032em;line-height:1.85;color:#aaadb6;max-width:600px;margin:0}
+    .hero-cta {display:flex;gap:12px;align-items:center;flex:none}
+    .button {display:inline-flex;justify-content:center;align-items:center;gap:25px;min-height:45px;padding:0 17px;font-size:13px;font-weight:590;white-space:nowrap;border-radius:6px;border:1px solid transparent;transition:transform .25s var(--ease),background .25s,border-color .25s}
+    .button:hover {transform:translateY(-2px)}
+    .button.primary {background:#f7f8f8;color:#111214;border-color:#f7f8f8}
+    .button.primary:hover {background:#e4e5eb}
+    .button.secondary {background:rgba(255,255,255,.035);color:#e2e3e7;border-color:var(--hairline2)}
+    .button.secondary:hover {background:rgba(255,255,255,.08)}
+    .button .icon {width:15px;height:15px}
+    .hero-scene {position:relative;margin-top:96px;height:565px;overflow:hidden;isolation:isolate}
+    .scene-halo {position:absolute;pointer-events:none;z-index:-1;left:13%;right:13%;top:0;height:220px;background:radial-gradient(ellipse,rgba(69,68,132,.23),transparent 70%);filter:blur(80px)}
+    .scene-floor {position:absolute;z-index:-1;inset:0 0 auto;background:linear-gradient(transparent 87%,#08090a);height:100%}
+    .workbench {position:relative;width:100%;height:660px;border:1px solid rgba(240,240,255,.19);background:#0e0f11;border-radius:13px 13px 0 0;overflow:hidden;box-shadow:0 1px 0 rgba(255,255,255,.1) inset,0 38px 140px rgba(0,0,0,.7)}
+    .wb-bar {height:50px;display:flex;align-items:center;gap:15px;padding:0 18px;background:#121315;border-bottom:1px solid var(--hairline)}
+    .wb-dots {display:flex;gap:6px}.wb-dots span{height:8px;width:8px;border-radius:50%;background:#33343a}
+    .wb-location {margin-left:13px;font-size:11px;color:#787a84;letter-spacing:.02em}
+    .wb-status {margin-left:auto;display:flex;align-items:center;gap:8px;color:#8c8d95;font-size:10px;font-family:Inter,system-ui,sans-serif}
+    .wb-status::before {content:'';width:5px;height:5px;border-radius:50%;background:#88a699}
+    .wb-content {display:grid;grid-template-columns:210px minmax(0,1fr);height:calc(100% - 50px)}
+    .wb-sidebar{border-right:1px solid var(--hairline);background:#111214;padding:26px 15px;color:#858791}
+    .wb-caption {font-size:9px;letter-spacing:.14em;color:#696b74;font-weight:600;text-transform:uppercase;padding:0 12px;margin-bottom:17px}
+    .wb-side-link {font-size:11px;color:#9799a2;display:flex;align-items:center;gap:11px;padding:11px 12px;border-radius:6px}
+    .wb-side-link .bullet{width:12px;height:12px;border:1px solid #50515a;border-radius:3px}
+    .wb-side-link.active {background:#202124;color:#f0f1f3}
+    .wb-side-link.active .bullet {background:#7675d9;border-color:#7675d9}
+    .wb-side-spacer{height:36px}
+    .wb-side-project{font-size:11px;color:#9c9da6;line-height:2.9;padding-left:13px;display:flex;justify-content:space-between}
+    .wb-side-project span{color:#575961;font-size:10px}
+    .wb-main{padding:30px 34px 52px;background:radial-gradient(ellipse at 75% 0%,rgba(70,72,113,.07),transparent 55%),#0e0f11;min-width:0}
+    .wb-head{display:flex;align-items:flex-start;justify-content:space-between;gap:30px}
+    .wb-head .kicker{font-size:10px;color:#777984;letter-spacing:.12em;text-transform:uppercase;margin-bottom:9px}
+    .wb-head h2{font-size:28px;line-height:1.15;font-weight:540;letter-spacing:-.05em;margin:0}
+    .wb-head h2 span{color:#72747e}
+    .wb-control{display:flex;align-items:center;gap:7px;color:#8d909a;background:#1b1c1f;border:1px solid rgba(255,255,255,.055);border-radius:5px;font-size:10px;padding:8px 10px}
+    .wb-work-title{display:flex;justify-content:space-between;align-items:center;margin:39px 0 14px;font-size:10px;letter-spacing:.04em;color:#b7b8c1}
+    .wb-work-title span{color:#666972;font-size:10px}
+    .wb-grid{display:grid;grid-template-columns:1.1fr .85fr .85fr;gap:12px}
+    .study-preview{min-width:0;height:292px;border:1px solid rgba(255,255,255,.095);border-radius:9px;background:#151619;overflow:hidden;position:relative;transition:transform .35s var(--ease),border-color .25s}
+    .study-preview:hover{transform:translateY(-4px);border-color:rgba(150,149,255,.33)}
+    .study-preview--dashboard{background:#17191f}
+    .s-head{height:38px;border-bottom:1px solid rgba(255,255,255,.09);padding:0 14px;display:flex;align-items:center;justify-content:space-between;font-size:10px;color:#a8b0c5}
+    .s-head b{font-size:9px;color:#a4a6b2;font-weight:500}
+    .s-body{display:flex;gap:8px;padding:13px 12px}
+    .s-side{width:28%;border-right:1px solid rgba(255,255,255,.05);padding-top:11px}
+    .s-side i{display:block;width:74%;height:5px;background:#313744;border-radius:3px;margin-bottom:16px}
+    .s-side i:nth-child(2){width:65%;background:#6562af}.s-side i:nth-child(4){width:55%}
+    .s-front{flex:1}
+    .s-front strong{display:block;color:#e3e6ef;font-size:9px;margin:7px 0 12px}
+    .s-numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}.s-numbers i{height:37px;background:#222631;border:1px solid rgba(255,255,255,.04);border-radius:4px}
+    .s-chart{margin-top:12px;border:1px solid rgba(255,255,255,.05);height:103px;background:#20232b;border-radius:4px;position:relative}
+    .s-chart svg{position:absolute;inset:0;width:100%;height:100%}
+    .study-preview--mobile{background:#171820;display:flex;justify-content:center;align-items:flex-start;padding-top:25px}
+    .device{height:290px;width:145px;background:#f7f7fb;border:5px solid #2d2f3c;border-radius:24px 24px 0 0;box-shadow:0 17px 45px rgba(0,0,0,.45);overflow:hidden;color:#1b2031;position:relative;padding:21px 13px}
+    .device::before{content:'';position:absolute;top:8px;left:50%;transform:translateX(-50%);width:35px;height:8px;background:#2d2f3c;border-radius:5px}
+    .device-label{font-size:8px;color:#8990a0}.device h3{font-size:15px;margin:7px 0 12px;font-weight:660;letter-spacing:-.055em}.device-banner{height:70px;border-radius:7px;background:#ded9f6;padding:11px;font-size:10px;color:#5a5188;position:relative;overflow:hidden}.device-banner::after{content:'';position:absolute;right:-21px;bottom:-29px;width:93px;height:93px;border:19px solid #b7a9e9;border-radius:50%}.device-list{margin-top:10px;display:grid;gap:7px}.device-list i{display:block;height:24px;background:#edf0f5;border-radius:5px}.device-list i:nth-child(2){width:91%}.device-list i:nth-child(3){width:81%}
+    .study-preview--web{background:#eceef4;color:#161721;padding:13px}
+    .webtop{display:flex;align-items:center;justify-content:space-between;font-size:8px;font-weight:700;color:#181a28}.webtop span{display:flex;gap:4px}.webtop i{height:3px;width:15px;border-radius:4px;background:#b5bbc7}.webfeature{margin-top:29px;letter-spacing:-.065em;font-size:19px;line-height:1.1;font-weight:650}.webdesc{margin-top:10px;display:grid;gap:5px}.webdesc i{height:4px;background:#c7cdd8;border-radius:4px;width:84%}.webdesc i:nth-child(2){width:65%}.webcards{margin-top:23px;display:grid;grid-template-columns:1fr 1fr;gap:7px}.webcards i{height:77px;border-radius:5px;background:linear-gradient(135deg,#b3b9db,#d7dbf0)}.webcards i:nth-child(2){background:linear-gradient(135deg,#c6d4d5,#e5ecea)}
+    .wb-preview-caption{display:flex;align-items:center;gap:7px;color:#64656e;font-size:10px;letter-spacing:.01em;margin-top:17px}
+    .wb-preview-caption i{width:12px;height:12px;border-radius:50%;border:1px solid #5a5d68;display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-size:7px}
+    .hero-fade{position:absolute;left:0;right:0;bottom:-2px;height:165px;background:linear-gradient(transparent,#08090a 89%);pointer-events:none}
+    .eyebrow-section{font-size:11px;color:#777b86;letter-spacing:.09em;font-weight:570;display:flex;gap:18px;align-items:center}
+    .eyebrow-section strong{font-size:11px;color:#c7c9d0;font-weight:570}
+    .section-intro{display:grid;grid-template-columns:270px 1fr;gap:55px;padding:0 0 64px;border-bottom:1px solid var(--hairline)}
+    .section-intro h2{font-size:clamp(36px,4vw,54px);letter-spacing:-.065em;font-weight:540;line-height:1.24;margin:0;max-width:730px}
+    .section-intro .muted{color:#8c8e98}
+    .section-intro p{font-size:16px;line-height:1.8;color:#a1a3ad;max-width:680px;margin:22px 0 0;letter-spacing:-.02em}
+    .services{padding:134px 0 0}
+    .service-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:44px;border:1px solid var(--hairline);border-radius:10px;overflow:hidden}
+    .service{padding:34px 33px 38px;min-height:302px;position:relative;background:#0d0e10}
+    .service+.service{border-left:1px solid var(--hairline)}
+    .service-count{font-family:Inter,ui-monospace,monospace;font-size:11px;color:#696c78;letter-spacing:.035em}
+    .service-icon{width:39px;height:39px;margin-top:38px;color:#c4c4e4}
+    .service-icon svg{width:34px;height:34px;fill:none;stroke:#b0b2cc;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+    .service h3{font-size:21px;font-weight:535;letter-spacing:-.04em;margin:19px 0 10px}
+    .service p{font-size:13px;line-height:1.8;color:#90939e;margin:0;max-width:260px}
+    .work{padding:167px 0 0}
+    .work-header{display:flex;gap:38px;align-items:flex-end;justify-content:space-between;margin-bottom:45px}
+    .work-header h2{font-size:clamp(35px,4.3vw,58px);letter-spacing:-.07em;line-height:1.2;font-weight:535;margin:16px 0 0}
+    .work-header p{font-size:13px;color:#858891;line-height:1.8;max-width:330px;margin:0 0 5px}
+    .work-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:17px}
+    .case{border:1px solid var(--hairline);background:#101113;border-radius:9px;overflow:hidden;transition:border-color .25s ease}
+    .case:hover{border-color:rgba(160,160,255,.27)}
+    .case-wide{grid-column:1 / -1;display:grid;grid-template-columns:.84fr 1.16fr;min-height:395px}
+    .case-desc{padding:38px 40px 30px;display:flex;flex-direction:column;min-height:340px}
+    .case-wide .case-desc{padding:44px 46px}
+    .case-index{font-size:11px;color:#787c86;letter-spacing:.08em}
+    .case-title{font-size:29px;letter-spacing:-.052em;line-height:1.3;font-weight:540;margin:37px 0 13px}
+    .case-wide .case-title{font-size:36px}
+    .case-summary{font-size:13px;line-height:1.85;color:#9699a4;max-width:390px;margin:0}
+    .case-tags{margin-top:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:38px}
+    .case-tags span{font-size:10px;color:#9da0aa;border:1px solid rgba(255,255,255,.1);border-radius:5px;padding:6px 9px}
+    .case-art{min-height:365px;position:relative;overflow:hidden;display:grid;place-items:center}
+    .case-wide .case-art{min-height:395px;background:radial-gradient(ellipse at 50% 45%,rgba(112,109,199,.18),transparent 65%),#14151b;border-left:1px solid var(--hairline)}
+    .case-art-one .board{position:absolute;top:69px;left:17%;width:81%;height:312px;background:#eeeff4;border:5px solid #22232c;border-radius:11px 11px 0 0;box-shadow:0 34px 85px rgba(0,0,0,.45);overflow:hidden}
+    .board-bar{height:28px;background:#fff;border-bottom:1px solid #dedfe7;display:flex;align-items:center;gap:6px;padding:0 11px}.board-bar i{height:5px;width:5px;border-radius:50%;background:#c9cbd2}
+    .board-body{display:grid;grid-template-columns:85px 1fr;height:100%}.board-side{background:#f8f9fb;border-right:1px solid #e3e4ea;padding:15px 12px}.board-side i{display:block;width:70%;height:5px;border-radius:3px;background:#d2d6dd;margin-bottom:18px}.board-side i:nth-child(2){background:#a4a3e9}.board-front{padding:19px 16px}.board-front .table-title{height:11px;width:34%;border-radius:4px;background:#afb4c2;margin-bottom:14px}.board-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.board-metrics i{height:50px;border:1px solid #e1e3ea;border-radius:5px;background:white}.board-table{margin-top:14px;border:1px solid #e1e3e9;background:white;border-radius:5px;padding:9px}.board-table i{display:block;height:9px;border-bottom:1px solid #eceef2}.board-table i:last-child{border:0}
+    .art-caption{position:absolute;bottom:19px;right:24px;color:rgba(231,232,240,.34);font-size:10px;letter-spacing:.02em}
+    .case-art-two{background:radial-gradient(ellipse at 50% 55%,rgba(102,96,162,.22),transparent 68%),#15151a}
+    .mini-phones{height:297px;display:flex;align-items:flex-end;gap:16px;transform:translateY(38px) rotate(-4deg)}.mini-phones .mini-phone{position:relative;height:292px;width:141px;border-radius:25px 25px 0 0;background:#f7f7fa;border:5px solid #2a2b32;box-shadow:0 35px 60px rgba(0,0,0,.5);overflow:hidden;padding:26px 10px;color:#2a2b33}.mini-phones .mini-phone:nth-child(2){height:265px;transform:rotate(8deg);background:#f0f4f6}.mini-phone .mini-title{font-size:13px;font-weight:650;letter-spacing:-.04em;margin-bottom:12px}.mini-phone .mini-hero{height:94px;background:#d8d1ed;border-radius:8px;margin-bottom:11px;position:relative}.mini-phone .mini-hero::after{content:'';width:61px;height:61px;border-radius:50%;background:#abafd7;position:absolute;right:8px;top:15px}.mini-phone .mini-lines i{display:block;background:#e3e5ec;height:20px;margin-bottom:7px;border-radius:5px}
+    .case-art-three{background:radial-gradient(ellipse at 70% 35%,rgba(80,110,149,.19),transparent 60%),#15181a}
+    .website-sheet{height:254px;width:85%;transform:rotate(3deg) translateY(37px);border:5px solid #30343c;border-bottom:0;border-radius:10px 10px 0 0;background:#eef2f3;box-shadow:0 35px 60px rgba(0,0,0,.38);overflow:hidden;padding:16px}.website-top{display:flex;justify-content:space-between;align-items:center;color:#202a37;font-size:8px;font-weight:700}.website-top i{width:70px;height:4px;background:#bac0c7;border-radius:2px}.website-headline{font-size:22px;line-height:1.09;color:#1c2e42;letter-spacing:-.06em;font-weight:700;margin-top:43px}.website-details{height:6px;width:64%;background:#c4cbd2;margin:10px 0 21px;border-radius:3px}.website-tiles{display:flex;gap:8px}.website-tiles i{display:block;flex:1;height:90px;background:#bacce1;border-radius:7px}.website-tiles i:nth-child(2){background:#d7d7e4}.website-tiles i:nth-child(3){background:#bdd3d0}
+    .work-disclaimer{margin-top:17px;text-align:right;color:#666a74;font-size:11px;line-height:1.6}
+    .method{padding:161px 0 0}
+    .method .section-intro{padding-bottom:53px}
+    .method-rows{display:grid;grid-template-columns:1fr;gap:0}
+    .method-row{display:grid;grid-template-columns:100px 1fr 1fr;gap:20px;align-items:start;padding:35px 0;border-bottom:1px solid var(--hairline)}
+    .method-num{color:#777a82;font-size:12px;font-family:Inter,ui-monospace,monospace}.method-row h3{font-size:24px;letter-spacing:-.05em;font-weight:540;margin:0}.method-row p{color:#9a9ca5;line-height:1.85;font-size:13px;margin:0;max-width:400px}
+    .about{padding:150px 0 0}
+    .about-panel{min-height:264px;border:1px solid var(--hairline);border-radius:9px;background:linear-gradient(150deg,#141519,#0d0e10);display:grid;grid-template-columns:1.1fr .9fr;overflow:hidden}
+    .about-copy{padding:43px 49px}.about-copy .overline{margin-bottom:24px}.about-copy h2{font-size:37px;line-height:1.25;letter-spacing:-.056em;font-weight:540;margin:0;max-width:510px}.about-copy p{font-size:13px;color:#a0a2ac;line-height:1.85;max-width:530px;margin:20px 0 0}
+    .about-proof{border-left:1px solid var(--hairline);padding:40px 39px;display:grid;align-content:center;gap:24px}
+    .proof-top{font-size:11px;color:#777a84;letter-spacing:.12em;text-transform:uppercase}
+    .proof-heading{font-size:25px;line-height:1.3;letter-spacing:-.05em;font-weight:550;margin:0}
+    .proof-caption{font-size:12px;color:#9295a0;margin:0}
+    .proof-sep{height:1px;background:var(--hairline)}
+    .contact{padding:150px 0 0}
+    .contact-inner{border-top:1px solid var(--hairline);padding:111px 0 136px;display:flex;align-items:end;justify-content:space-between;gap:30px}
+    .contact .overline{margin-bottom:20px}
+    .contact h2{font-size:clamp(44px,5.2vw,74px);font-weight:550;line-height:1.17;letter-spacing:-.073em;margin:0}.contact h2 span{color:#90929c}
+    .contact .email{display:inline-flex;align-items:center;gap:17px;border-bottom:1px solid #dedfe4;font-size:18px;font-weight:500;padding-bottom:12px;letter-spacing:-.025em;white-space:nowrap;transition:color .2s}.contact .email:hover{color:#b7b6ff}
+    .contact .email svg{width:20px;height:20px}
+    footer{border-top:1px solid var(--hairline);padding:29px 0 36px}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:22px;color:#777a83;font-size:11px}
+    .footer-left{display:flex;gap:35px;align-items:center}.footer-left strong{color:#c8c9ce;font-size:14px;font-weight:630;letter-spacing:-.05em}
+    .footer-right{display:flex;gap:23px;align-items:center}.footer-right a:hover{color:#e1e2e6}
+    [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
+    [data-reveal].visible{opacity:1;transform:none}
+    @media (max-width:1000px){.container{width:min(var(--width),calc(100% - 62px))}.hero{padding-top:100px}.hero h1{font-size:clamp(51px,7.2vw,73px)}.hero-bottom{align-items:flex-start;flex-direction:column}.hero-scene{margin-top:80px}.wb-content{grid-template-columns:175px 1fr}.wb-main{padding:28px 24px}.section-intro{grid-template-columns:180px 1fr;gap:30px}.service{padding:30px 23px}.case-art-one .board{left:7%;width:94%}}
+    @media (max-width:720px){html{scroll-padding-top:78px}.site-header{height:65px}.container{width:calc(100% - 40px)}.wordmark{font-size:18px}.menu-toggle{display:block}.site-nav{display:none;position:absolute;left:0;right:0;top:65px;height:auto;background:#111214;padding:12px 20px 19px;border-bottom:1px solid var(--hairline);box-shadow:0 20px 50px rgba(0,0,0,.5);flex-direction:column;align-items:stretch;gap:0}.site-nav.open{display:flex}.site-nav a{padding:13px 0;font-size:14px}.site-nav .nav-contact{margin-top:10px;justify-content:space-between;padding:13px}.hero{padding-top:88px}.hero h1{font-size:clamp(45px,9.2vw,70px);line-height:1.17;letter-spacing:-.075em;margin:25px 0 22px}.hero-description{font-size:14px;line-height:1.85}.hero-cta{width:100%;gap:10px;flex-wrap:wrap}.button{min-height:43px;gap:11px;padding:0 14px}.hero-scene{margin-top:63px;height:400px;overflow:hidden}.workbench{width:790px;max-width:none;transform:scale(.75);transform-origin:top left}.hero-fade{height:125px}.services{padding-top:87px}.section-intro{display:block;padding-bottom:34px}.section-intro h2{font-size:38px;margin-top:23px}.section-intro p{font-size:14px;margin-top:16px}.service-list{grid-template-columns:1fr;margin-top:25px}.service{min-height:215px;padding:27px 30px}.service+.service{border-left:0;border-top:1px solid var(--hairline)}.service-icon{margin-top:21px}.service h3{font-size:20px;margin-top:12px}.work{padding-top:99px}.work-header{display:block;margin-bottom:27px}.work-header h2{font-size:41px}.work-header p{margin-top:17px}.work-grid{display:block}.case{margin-bottom:14px}.case-wide{display:block}.case-desc,.case-wide .case-desc{min-height:242px;padding:30px 30px 25px}.case-title,.case-wide .case-title{font-size:28px;margin:25px 0 9px}.case-tags{padding-top:18px}.case-art,.case-wide .case-art{min-height:275px;border-left:0;border-top:1px solid var(--hairline)}.case-art-one .board{height:285px;top:43px;left:12%;width:82%}.mini-phones{transform:translateY(58px) rotate(-4deg)}.work-disclaimer{text-align:left}.method{padding-top:103px}.method .section-intro{padding-bottom:39px}.method-row{grid-template-columns:40px 1fr;gap:12px;padding:29px 0}.method-row h3{font-size:20px}.method-row p{grid-column:2;font-size:13px;margin-top:-2px}.about{padding-top:96px}.about-panel{display:block}.about-copy{padding:30px 29px 24px}.about-copy h2{font-size:30px}.about-proof{border-left:0;border-top:1px solid var(--hairline);padding:29px;gap:19px}.proof-heading{font-size:24px}.contact{padding-top:82px}.contact-inner{padding:77px 0 86px;display:block}.contact h2{font-size:clamp(41px,9vw,62px);margin-bottom:39px}.contact .email{font-size:16px}.footer-inner{align-items:start;flex-direction:column;gap:19px}.footer-left{gap:16px;align-items:baseline}.footer-right{gap:15px}}
+    @media (max-width:425px){.hero h1{font-size:44px}.hero-scene{height:317px}.workbench{transform:scale(.58)}.hero-cta .button{font-size:12px}.overline{font-size:10px}.case-art-one .board{width:94%;left:8%}}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}[data-reveal]{opacity:1!important;transform:none!important}}
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 이동</a>
+<header class="site-header">
+  <div class="container">
+    <a href="#top" class="wordmark" aria-label="STUDIO AIFPA 홈">
+      <span class="wmark" aria-hidden="true"><svg viewBox="0 0 22 25"><path d="M2.5 21 10.5 3l8 18M6 14h10"/></svg></span>
+      aifpa<span class="brand-dot">.</span>
+    </a>
+    <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="메뉴 열기"><svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav class="site-nav" id="site-nav" aria-label="주요 메뉴">
+      <a href="#services">Services</a><a href="#work">Work</a><a href="#method">Approach</a><a href="#about">Studio</a>
+      <a class="nav-contact" href="mailto:info@aifpa.kr?subject=STUDIO%20AIFPA%20%7C%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%AC%B8%EC%9D%98">Start a project <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="container hero-content">
+      <div class="overline">STUDIO AIFPA — INDEPENDENT DESIGN STUDIO</div>
+      <h1 id="hero-title">아이디어를 명확하게,<br><span>경험을 세심하게.</span></h1>
+      <div class="hero-bottom">
+        <p class="hero-description">복잡한 문제에서 단순하고 좋은 경험을 발견합니다.<br>UX/UI부터 웹과 비주얼 디자인까지, 아이디어의 가능성을 구체적인 화면으로 만들어갑니다.</p>
+        <div class="hero-cta">
+          <a class="button primary" href="#work">View selected work <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          <a class="button secondary" href="mailto:info@aifpa.kr?subject=STUDIO%20AIFPA%20%7C%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%AC%B8%EC%9D%98">프로젝트 문의 <svg class="icon" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="container hero-scene" aria-label="디지털 제품 및 UI 디자인 분야 시각화">
+      <div class="scene-halo"></div>
+      <div class="workbench">
+        <div class="wb-bar"><div class="wb-dots"><span></span><span></span><span></span></div><span class="wb-location">studio / work / overview</span><div class="wb-status">INTERFACE DESIGN</div></div>
+        <div class="wb-content">
+          <aside class="wb-sidebar"><div class="wb-caption">STUDIO AIFPA</div><div class="wb-side-link active"><span class="bullet"></span>Overview</div><div class="wb-side-link"><span class="bullet"></span>Selected work</div><div class="wb-side-link"><span class="bullet"></span>Design system</div><div class="wb-side-spacer"></div><div class="wb-caption">SPECIALTIES</div><div class="wb-side-project">Product design <span>01</span></div><div class="wb-side-project">Mobile experience <span>02</span></div><div class="wb-side-project">Responsive web <span>03</span></div></aside>
+          <div class="wb-main">
+            <div class="wb-head"><div><div class="kicker">THE WORK WE DO</div><h2>Made to make <span>more sense.</span></h2></div><div class="wb-control">2024 — 2026 <svg class="icon" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></svg></div></div>
+            <div class="wb-work-title">Interfaces & experiences <span>01 — 03</span></div>
+            <div class="wb-grid">
+              <div class="study-preview study-preview--dashboard" aria-hidden="true"><div class="s-head">Inventory & operations <b>Dashboard</b></div><div class="s-body"><div class="s-side"><i></i><i></i><i></i><i></i></div><div class="s-front"><strong>Workspace overview</strong><div class="s-numbers"><i></i><i></i><i></i></div><div class="s-chart"><svg viewBox="0 0 200 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 67 29 61 57 69 88 43 112 49 145 30 170 36 200 13" stroke="#8d89ed" stroke-width="1.8" fill="none"/><path d="M0 67 29 61 57 69 88 43 112 49 145 30 170 36 200 13V90H0Z" fill="rgba(143,136,239,.08)"/></svg></div></div></div></div>
+              <div class="study-preview study-preview--mobile" aria-hidden="true"><div class="device"><div class="device-label">Your everyday</div><h3>Pet companion</h3><div class="device-banner">Good morning</div><div class="device-list"><i></i><i></i><i></i></div></div></div>
+              <div class="study-preview study-preview--web" aria-hidden="true"><div class="webtop">STUDIO WEB <span><i></i><i></i><i></i></span></div><div class="webfeature">A better way<br>to connect ideas.</div><div class="webdesc"><i></i><i></i></div><div class="webcards"><i></i><i></i></div></div>
+            </div>
+            <div class="wb-preview-caption"><i>i</i> 분야별 구성 예시 — 실제 고객 프로젝트 화면과 다를 수 있습니다.</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-fade"></div>
+    </div>
+  </section>
+  <section class="services container" id="services" aria-labelledby="services-title">
+    <div class="section-intro" data-reveal>
+      <div class="eyebrow-section"><strong>01 /</strong> WHAT WE DO</div>
+      <div><h2 id="services-title">보기 좋은 화면을 넘어,<br><span class="muted">쓸 이유가 있는 디자인.</span></h2><p>누가, 왜, 어떻게 사용할지를 먼저 생각합니다. 콘텐츠를 정리하고 경험을 설계한 뒤 시각적 완성도까지 연결합니다.</p></div>
+    </div>
+    <div class="service-list" data-reveal>
+      <article class="service"><div class="service-count">01 /</div><div class="service-icon"><svg viewBox="0 0 32 32"><rect x="3" y="5" width="26" height="22" rx="4"/><path d="M3 12h26M11 12v15M16 18h8M16 22h5"/></svg></div><h3>UX / UI Design</h3><p>사용자 흐름, 정보 구조, 모바일·웹 인터페이스를 일관된 경험으로 설계합니다.</p></article>
+      <article class="service"><div class="service-count">02 /</div><div class="service-icon"><svg viewBox="0 0 32 32"><rect x="2.5" y="6" width="27" height="19" rx="3"/><path d="M2.5 12h27M10 25v3m12-3v3M8 17h7M19 17h5M19 21h5"/></svg></div><h3>Web Experience</h3><p>화면 크기에 자연스럽게 대응하는 브랜드 사이트와 웹 서비스 화면을 디자인합니다.</p></article>
+      <article class="service"><div class="service-count">03 /</div><div class="service-icon"><svg viewBox="0 0 32 32"><path d="m16 3 4.2 9 9.8 4-9.8 4-4.2 9-4.2-9L2 16l9.8-4Z"/><circle cx="16" cy="16" r="3"/></svg></div><h3>Visual Identity</h3><p>서비스의 성격이 선명하게 보이도록 브랜드 그래픽, 키 비주얼, 일러스트를 만듭니다.</p></article>
+    </div>
+  </section>
+  <section class="work container" id="work" aria-labelledby="work-title">
+    <div class="work-header" data-reveal><div><div class="eyebrow-section"><strong>02 /</strong> FOCUS AREAS</div><h2 id="work-title">아이디어가 화면이 되기까지.</h2></div><p>웹·앱·운영 도구 등 다양한 유형의 인터페이스와 브랜드 경험을 설계해왔습니다.</p></div>
+    <div class="work-grid">
+      <article class="case case-wide" data-reveal><div class="case-desc"><div class="case-index">FOCUS 01 / PRODUCT DESIGN</div><h3 class="case-title">복잡한 정보를<br>한눈에 읽히도록.</h3><p class="case-summary">백오피스 대시보드, 재고관리 시스템, 운영 도구처럼 정보량이 많은 화면에 명확한 구조를 부여합니다.</p><div class="case-tags"><span>Dashboard</span><span>Data UI</span><span>Information architecture</span></div></div><div class="case-art case-art-one"><div class="board" aria-hidden="true"><div class="board-bar"><i></i><i></i><i></i></div><div class="board-body"><div class="board-side"><i></i><i></i><i></i><i></i></div><div class="board-front"><div class="table-title"></div><div class="board-metrics"><i></i><i></i><i></i></div><div class="board-table"><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div><span class="art-caption">ILLUSTRATIVE INTERFACE</span></div></article>
+      <article class="case" data-reveal><div class="case-art case-art-two"><div class="mini-phones" aria-hidden="true"><div class="mini-phone"><div class="mini-title">Companion</div><div class="mini-hero"></div><div class="mini-lines"><i></i><i></i><i></i></div></div><div class="mini-phone"><div class="mini-title">Daily</div><div class="mini-hero"></div><div class="mini-lines"><i></i><i></i></div></div></div><span class="art-caption">ILLUSTRATIVE INTERFACE</span></div><div class="case-desc"><div class="case-index">FOCUS 02 / MOBILE EXPERIENCE</div><h3 class="case-title">손안에서 자연스러운<br>사용자 경험.</h3><p class="case-summary">반려동물 기기 관리, 일상 관리 등 사용자의 생활과 가까운 모바일 서비스 화면을 디자인합니다.</p><div class="case-tags"><span>Mobile app</span><span>User flow</span><span>UI design</span></div></div></article>
+      <article class="case" data-reveal><div class="case-art case-art-three"><div class="website-sheet" aria-hidden="true"><div class="website-top">DIGITAL EXPERIENCE <i></i></div><div class="website-headline">Build clarity<br>on every screen.</div><div class="website-details"></div><div class="website-tiles"><i></i><i></i><i></i></div></div><span class="art-caption">ILLUSTRATIVE INTERFACE</span></div><div class="case-desc"><div class="case-index">FOCUS 03 / RESPONSIVE WEB</div><h3 class="case-title">다양한 화면에서도<br>일관된 브랜드.</h3><p class="case-summary">서비스 소개 사이트와 웹 플랫폼을 사용자 환경에 맞는 반응형 레이아웃으로 풀어냅니다.</p><div class="case-tags"><span>Web</span><span>Responsive</span><span>Landing page</span></div></div></article>
+    </div>
+    <p class="work-disclaimer">* 이미지들은 작업 분야를 보여주기 위한 구성 예시이며, 실제 클라이언트 납품 화면이 아닙니다.</p>
+  </section>
+  <section class="method container" id="method" aria-labelledby="method-title">
+    <div class="section-intro" data-reveal><div class="eyebrow-section"><strong>03 /</strong> OUR APPROACH</div><div><h2 id="method-title">명확한 구조에서<br><span class="muted">좋은 디테일이 나옵니다.</span></h2><p>프로젝트를 이해하고, 필요한 흐름을 정리하고, 실제 사용 장면을 기준으로 완성도를 높입니다.</p></div></div>
+    <div class="method-rows" data-reveal>
+      <div class="method-row"><div class="method-num">01</div><h3>Understand the problem</h3><p>누구를 위한 제품인지, 어떤 문제를 풀어야 하는지 목적과 맥락부터 정리합니다.</p></div>
+      <div class="method-row"><div class="method-num">02</div><h3>Shape the experience</h3><p>정보 구조와 주요 사용 흐름을 설계하고, 이해하기 쉬운 화면으로 구체화합니다.</p></div>
+      <div class="method-row"><div class="method-num">03</div><h3>Polish the details</h3><p>일관된 시각 언어와 정교한 인터랙션을 통해 완성도 높은 결과물로 다듬습니다.</p></div>
+    </div>
+  </section>
+  <section class="about container" id="about" aria-labelledby="about-title" data-reveal>
+    <div class="about-panel"><div class="about-copy"><div class="overline">INDEPENDENT BY DESIGN</div><h2 id="about-title">하나의 아이디어에도,<br>충분한 생각과 밀도를.</h2><p>STUDIO AIFPA는 UX/UI와 웹·비주얼 디자인을 중심으로 프로젝트를 수행하는 독립 스튜디오입니다. 규모보다 문제의 본질에 집중합니다.</p></div><div class="about-proof"><div class="proof-top">RECOGNITION</div><div><h3 class="proof-heading">2024 LOUD<br>신예상 수상</h3><p class="proof-caption">라우드소싱 디자인 어워드</p></div><div class="proof-sep"></div><div><h3 class="proof-heading">2024 LOUD<br>우수 디자이너</h3><p class="proof-caption">기존 스튜디오 홍보 자료 기준</p></div></div></div>
+  </section>
+  <section class="contact container" id="contact" aria-labelledby="contact-title">
+    <div class="contact-inner" data-reveal><div><div class="overline">LET'S MAKE SOMETHING MEANINGFUL</div><h2 id="contact-title">다음 아이디어를,<br><span>함께 이야기해볼까요?</span></h2></div><a class="email" href="mailto:info@aifpa.kr?subject=STUDIO%20AIFPA%20%7C%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%AC%B8%EC%9D%98">info@aifpa.kr <svg class="icon" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+  </section>
+</main>
+<footer><div class="container footer-inner"><div class="footer-left"><strong>aifpa.</strong><span>© 2026 STUDIO AIFPA</span></div><div class="footer-right"><span>Independent design studio · South Korea</span><a href="#top">Back to top ↑</a></div></div></footer>
+<script>
+(()=>{const btn=document.getElementById('menu-toggle'),nav=document.getElementById('site-nav');btn.addEventListener('click',()=>{const open=btn.getAttribute('aria-expanded')!=='true';btn.setAttribute('aria-expanded',String(open));btn.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');nav.classList.toggle('open',open)});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','메뉴 열기');nav.classList.remove('open')}));const elements=document.querySelectorAll('[data-reveal]');if(!('IntersectionObserver'in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){elements.forEach(e=>e.classList.add('visible'))}else{const observer=new IntersectionObserver(es=>{for(const e of es){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}},{threshold:.07,rootMargin:'0px 0px 60px 0px'});elements.forEach(e=>observer.observe(e))}})();
+</script>
+</body>
+</html>
